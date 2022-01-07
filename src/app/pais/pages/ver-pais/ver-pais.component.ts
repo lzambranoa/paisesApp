@@ -23,20 +23,18 @@ export class VerPaisComponent implements OnInit {
 
     this.activatedRoute.params
       .pipe(
-        switchMap( (param) => this.paisService.getPaisPorCodigo(param.id) ),
+        switchMap( (param) => this.paisService.getPaisPorCodigo(param.alpha2Code) ),
         tap( console.log )
       )
-      .subscribe( pais => {
-        this.pais = pais[0]
-      })
+      .subscribe( pais => this.pais = pais );
     
 
     // Forma larga de consumir el params del la url
     // this.activatedRoute.params
-    //   .subscribe(({id}) => {
-    //     console.log(id)
+    //   .subscribe(({alpha2Code}) => {
+    //     console.log(alpha2Code)
 
-    //     this.paisService.getPaisPorCodigo( id )
+    //     this.paisService.getPaisPorCodigo( alpha2Code )
     //       .subscribe( pais => {
     //         console.log(pais)
     //       })

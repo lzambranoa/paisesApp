@@ -5,6 +5,7 @@ export interface Country {
     ccn3:         string;
     cca3:         string;
     cioc:         string;
+    alpha2Code:   string;
     independent:  boolean;
     status:       string;
     unMember:     boolean;
