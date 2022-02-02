@@ -19,7 +19,7 @@ describe('PaisTablaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debe existir el PaisTableComponent', () => {
     expect(component).toBeTruthy();
   });
 });
